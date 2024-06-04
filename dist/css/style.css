@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.header__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px 25px;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__fv {
+  width: 100vw;
+  height: 100vh;
+}
+
+.openbtn {
+  position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/*ボタン内側*/
+.openbtn span {
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background: #fff;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 3px;
+  left: 0;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 13px;
+  left: 0;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 23px;
+  left: 0;
+}
+
+/*activeクラスが付与されると線が回転して×に*/
+.openbtn.active span:nth-of-type(1) {
+  top: 7px;
+  left: 0px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 100%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+  /*真ん中の線は透過*/
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 19px;
+  left: 0px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 100%;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
