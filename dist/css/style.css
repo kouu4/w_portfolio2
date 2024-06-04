@@ -8,6 +8,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   padding: 25px 25px;
   z-index: 2;
   display: flex;
@@ -21,6 +22,51 @@
   height: 100vh;
 }
 
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.headline__main {
+  font-weight: 700;
+  font-size: 1.4375rem;
+}
+
+.headline__sub {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 420px), print {
+  .headline {
+    gap: 26px;
+  }
+  .headline__main {
+    font-size: 1.75rem;
+  }
+  .headline__sub {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 640px), print {
+  .headline__main {
+    font-size: 2.5625rem;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .headline {
+    gap: 32px;
+  }
+  .headline__main {
+    font-size: 2.875rem;
+  }
+  .headline__sub {
+    font-size: 1.25rem;
+  }
+}
 .openbtn {
   position: relative; /*ボタン内側の基点となるためrelativeを指定*/
   cursor: pointer;
@@ -75,6 +121,7 @@
 }
 
 .logo {
+  color: white;
   font-size: 22px;
 }
 
