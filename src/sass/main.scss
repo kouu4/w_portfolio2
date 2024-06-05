@@ -5,6 +5,7 @@
 @import 'btn';
 @import 'copyright';
 @import 'footer';
+@import 'fv';
 @import 'header';
 @import 'headline';
 @import 'introduction';
@@ -17,6 +18,10 @@
 @import 'sec-works';
 @import 'skills';
 @import 'works';
+
+html,body {
+    overflow-X: hidden;
+}
 
 body {
     font-family: "Noto Sans JP", sans-serif;
