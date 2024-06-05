@@ -1,19 +1,54 @@
 @import 'variable';
 
 
+@import 'accordion';
+@import 'btn';
+@import 'copyright';
+@import 'footer';
 @import 'header';
 @import 'headline';
+@import 'introduction';
 @import 'js-openbtn';
 @import 'logo';
+@import 'nav';
+@import 'sec-about';
+@import 'sec-contact';
+@import 'sec-faq';
+@import 'sec-works';
+@import 'skills';
+@import 'works';
 
 body {
     font-family: "Noto Sans JP", sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 ul {
     list-style-type: none;
 }
+
 img{
-    // display: block;
+    display: block;
     max-width: 100%;
+}
+
+
+.-txt--white {
+    color: white;
+}
+
+
+@media screen and (min-width: 420px), print {
+    
+}
+
+@media screen and (min-width: 640px), print {
+
+}
+
+@media screen and (min-width: 768px), print {
+
 }

@@ -1,0 +1,51 @@
+.sec-about {
+    padding: 60px 0;
+    background-color: $bg_gray;
+}
+
+.sec-about__body {
+    margin-top: 44px;
+    margin-inline: auto;
+
+    width: 90vw;
+    max-width: 930px;
+}
+
+.sec-about__skills {
+    margin-top: 30px;
+}
+
+
+@media screen and (min-width: 420px), print {
+    .sec-about {
+        padding: 90px 20px;
+    }
+
+    .sec-about__body {
+        margin-top: 50px;
+    }
+
+    .sec-about__skills {
+        margin-top: 33px;
+    }
+}
+
+@media screen and (min-width: 640px), print {
+    .sec-about {
+        padding: 94px 27px;
+    }
+    
+    .sec-about__body {
+        margin-top: 53px;
+    }
+
+    .sec-about__skills {
+        margin-top: 36px;
+    }
+}
+
+@media screen and (min-width: 768px), print {
+    .sec-about {
+        padding: 122px 54px;
+    }
+}

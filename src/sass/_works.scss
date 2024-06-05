@@ -1,0 +1,78 @@
+.works {
+    position: relative; // .works__moreInfoを次のセクションに引っ掛けるためにposition:relative
+}
+
+.works__item {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 32px;
+    max-width: 480px;
+    margin-inline: auto;
+}
+
+.works__body {
+    padding: 10px 20px;
+    color: white;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
+}
+
+.works__ttl {
+    font-size: 1.6875rem;
+    padding: 10px 0 10px 10px;
+    border-left: 7px solid white;
+}
+
+.works__usedskill {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 2.1875rem;
+}
+
+.works__description {
+    padding-right: 10px;
+}
+
+.works__text {
+    margin-top: 26px;
+    padding-inline: 10px;
+}
+
+.works__duration {
+    text-align: end;
+}
+
+.works__link {
+    color: white;
+    text-align: end;
+
+    &:visited {
+        color: white;
+    }
+}
+
+.works__moreInfo {
+    margin-top: 55px;
+    max-width: 550px;
+    padding-inline: 20px;
+    margin-inline: auto;
+}
+
+@media screen and (min-width: 420px), print {
+    .works__ttl {
+        font-size: 1.875rem;
+    }
+
+    .works__usedskill {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 640px), print {
+
+}
+
+@media screen and (min-width: 768px), print {
+
+}
