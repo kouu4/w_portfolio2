@@ -516,9 +516,9 @@ footer .logo {
 }
 
 .works__list {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
 }
 
 .works__item {
@@ -526,6 +526,7 @@ footer .logo {
   flex-direction: column-reverse;
   justify-content: start;
   gap: 32px;
+  width: 100%;
   max-width: 460px;
   margin-inline: auto;
 }
