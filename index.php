@@ -195,38 +195,26 @@
             <div class="sec-works__content">
                 <div class="works">
                     <ul class="works__list">
-                    <li class="works__item">
-                            <a href="" class="works__link">
-                                <div class="works__body">
-                                    <h3 class="works__ttl">
-                                        サイト名が入ります。
-                                        <br>
-                                        <span class="works__usedskill">
-                                            HTML / CSS / jQuery / WordPress
-                                        </span>
-                                    </h3>
-                                    <div class="works__description">
-                                        <p class="works__text">
-                                            サイトの説明が入ります。サイトの説明が入ります。サイトの説明が入ります。サイトの説明が入ります。サイトの説明が入ります。サイトの説明が入ります。
-                                        </p>
 
-                                        <p class="works__duration">
-                                            〇日
-                                        </p>
 
-                                        <!-- /.works__link -->
-                                    </div>
-                                    <!-- /.works__description -->
-                                </div>
-                                <!-- /.works__body -->
-                                <div class="works__imgContainer">
-                                    <figure class="works__image">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/src/img/640x480.png" alt="">
-                                    </figure>
-                                </div>
-                                <!-- /.works__imgContainer -->
-                            </a>
-                        </li>
+                        <?php
+                        $args = array(
+                            'post_type' => 'works', // カスタム投稿タイプを指定
+                            'posts_per_page' => -1, // 取得する投稿数（-1は全ての投稿を取得）
+                        );
+
+                        $works_query = new WP_Query($args);
+
+                        if ($works_query->have_posts()) :
+                            while ($works_query->have_posts()) : $works_query->the_post(); ?>
+                                <?php get_template_part('loop', 'works'); ?>
+                        <?php endwhile;
+                            wp_reset_postdata(); // カスタムクエリをリセット
+                        endif;
+                        ?>
+
+
+
                     </ul>
                     <div class="works__moreInfo">
                         <a href="　　" class="btn">
@@ -301,4 +289,4 @@
     </main>
 
 
-<?php get_footer(); ?>
+    <?php get_footer(); ?>

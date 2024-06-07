@@ -11,5 +11,3 @@ jQuery('#overlay a').click(function () {
     jQuery('.openbtn').toggleClass('active');
     jQuery('#overlay').fadeOut(200);
 })
-
-console.log(111)
