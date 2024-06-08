@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<body>
-
     <header class="header">
 
         <div class="header__inner">
@@ -93,38 +91,27 @@
             <!-- /.sec-about__ttl -->
 
             <div class="sec-about__body">
-                <div class="sec-about__introduction">
-                    <div class="introduction">
-                        <table class="introduction__table">
-                            <tbody>
-                                <tr class="introduction__row">
-                                    <th class="introduction__head">氏名</th>
-                                    <td class="introduction__data">〇〇〇〇</td>　　<!-- カスタム投稿でつくる -->　　
-                                </tr>
-                                <tr class="introduction__row">
-                                    <th class="introduction__head">居住地</th>
-                                    <td class="introduction__data">〇〇〇〇</td>
-                                </tr>
-                                </tr>
-                                <tr class="introduction__row">
-                                    <th class="introduction__head">経歴</th>
-                                    <td class="introduction__data">
-                                        〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇
-                                    </td>
-                                </tr>
-                                <tr class="introduction__row">
-                                    <th class="introduction__head">趣味</th>
-                                    <td class="introduction__data">〇〇〇〇</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <figure class="introduction__portrait">
-                            <img src="<?php echo get_template_directory_uri(); ?>/src/img/640x480.png" alt="サイトオーナーの写真">
-                        </figure>
-                    </div>
-                    <!-- /.introduction -->
-                </div>
-                <!-- /.sec-about__introduction -->
+
+
+
+                <?php
+                $args = array(
+                    'post_type' => 'about_me', // カスタム投稿タイプを指定
+                    'posts_per_page' => -1, // 取得する投稿数（-1は全ての投稿を取得）
+                );
+
+                $about_me_query = new WP_Query($args);
+
+                if ($about_me_query->have_posts()) :
+                    while ($about_me_query->have_posts()) : $about_me_query->the_post(); ?>
+                        <?php get_template_part('loop', 'about_me'); ?>
+                <?php endwhile;
+                    wp_reset_postdata(); // カスタムクエリをリセット
+                endif;
+                ?>
+
+
+
 
                 <div class="sec-about__skills">
                     <div class="skills">
@@ -187,7 +174,7 @@
             <div class="sec-works__ttl -txt--white">
                 <div class="headline">
                     <h2 class="headline__main">WORKS</h2>
-                    <span class="headline__sub">制作物</span>
+                    <span class="headline__sub">(クリック/タップでサイトへジャンプします)</span>
                 </div>
                 <!-- /.headline -->
             </div>
@@ -200,7 +187,7 @@
                         <?php
                         $args = array(
                             'post_type' => 'works', // カスタム投稿タイプを指定
-                            'posts_per_page' => -1, // 取得する投稿数（-1は全ての投稿を取得）
+                            'posts_per_page' => 6, // 取得する投稿数（-1は全ての投稿を取得）
                         );
 
                         $works_query = new WP_Query($args);
@@ -217,7 +204,7 @@
 
                     </ul>
                     <div class="works__moreInfo">
-                        <a href="　　" class="btn">
+                        <a href="<?php echo esc_url(get_post_type_archive_link('works')); ?>" class="btn">
                             その他の制作物はこちら
                             <span class="btn__decoration">
                                 +

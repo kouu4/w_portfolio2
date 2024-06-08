@@ -34,6 +34,7 @@
     <!-- from here is css -->
     <!-- <link rel="stylesheet" href="ress.css"> -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/ress.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/loader.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
     <!-- to here is css -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,3 +43,17 @@
 
     <?php wp_head(); ?>
 </head>
+
+<body>
+
+    <div class="loader-bg">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <!-- /.spinner -->
+    </div>
+    <!-- /.loader-bg -->

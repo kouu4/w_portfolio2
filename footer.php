@@ -1,27 +1,27 @@
 <footer class="footer">
         <div class="footer__inner">
-            <a href="#" class="logo">
+            <a href="<?php echo home_url(); ?>" class="logo">
                 KT PORTFOLIO
             </a>
             <div class="nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
+                        <a href="<?php echo home_url(); ?>#about" class="nav__link">
                             About
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#works" class="nav__link">
+                        <a href="<?php echo home_url(); ?>#works" class="nav__link">
                             Works
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#faq" class="nav__link">
+                        <a href="<?php echo home_url(); ?>#faq" class="nav__link">
                             Faq
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">
+                        <a href="<?php echo home_url(); ?>#contact" class="nav__link">
                             Contact
                         </a>
                     </li>
@@ -38,6 +38,7 @@
     </footer>
 
     <script src="<?php echo get_template_directory_uri(); ?>/jquery.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/src/js/loader.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/fv.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/fixHeader.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/src/js/openbtn.js"></script>
