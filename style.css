@@ -600,6 +600,23 @@ print {
     margin-top: 40px;
 }
 
+.sec-slide {
+    padding: 78px 0 92px;
+    background-color: #EFEFEF;
+}
+
+.sec-slide__slide {
+    width: 100vw;
+    margin-inline: auto;
+    margin-top: 50px;
+}
+
+@media screen and  (min-width:600px),print {
+    .sec-slide__slide {
+        width: 80vw;
+    }
+}
+
 .sec-works {
     padding: 66px 20px 70px;
     background-color: #171717;
@@ -650,6 +667,24 @@ print {
     .skills__item {
         width: calc(25% - 20px);
     }
+}
+
+.slide {
+    /* position: relative;
+    padding-top: 56.25%; */
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.slide__item {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    /* top: 0;
+    left: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .works {

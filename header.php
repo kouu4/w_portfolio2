@@ -24,11 +24,11 @@
     <meta name="robots" content="noindex, nofollow">
 
     <!-- from here is favicon -->
-    <link rel="shortcut icon" href="./src/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
+    <!-- <link rel="shortcut icon" href="./src/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="./src/img/favicon/favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="./src/img/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="./src/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./src/img/favicon/favicon-16x16.png" sizes="16x16"> -->
     <!-- to here is favicon -->
     <link rel="canonical" href="https://www.kt-portfolio.jp">
     <!-- from here is css -->
