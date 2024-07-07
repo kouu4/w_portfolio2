@@ -25,6 +25,9 @@ if (have_posts()) {
                 // 次の記事へのリンク
                 next_post_link('<div class="post-nav__next">%link</div>', '次の記事: %title');
                 ?>
+                <div class="post-nav__list">
+                    <a href="<?php echo home_url('/posts'); ?>">記事一覧>></a>
+                </div>
             </div>
         </article>
 <?php

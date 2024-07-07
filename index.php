@@ -65,28 +65,35 @@
             <div class="blog">
                 <ul class="blog__list">
 
-
                     <?php
-                    if (have_posts()) :
-                        while (have_posts()) : the_post();
+                    $args = array(
+                        'post_type' => 'post',
+                        'posts_per_page' => 3,
+                    );
+
+                    $post_query = new WP_Query($args);
+
+                    if ($post_query->have_posts()) :
+                        while ($post_query->have_posts()) : $post_query->the_post();
                     ?>
                             <?php get_template_part('loop', 'blog'); ?>
 
                     <?php endwhile;
                     endif;
+                    wp_reset_postdata();
                     ?>
-
-
 
                 </ul>
                 <div class="blog__moreInfo">
-                    <a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>" class="btn">
-                        その他の制作物はこちら
+                    <?php $archive_link = home_url('posts'); ?>
+                    <a href="<?php echo esc_url(home_url('posts')); ?>" class="btn">
+                        その他の記事はこちら
                         <span class="btn__decoration">
                             +
                         </span>
                     </a>
                 </div>
+
                 <!-- /.blog__moreInfo -->
             </div>
             <!-- /.blog -->
@@ -157,8 +164,6 @@
 
         <div class="sec-about__body">
 
-
-
             <?php
             $args = array(
                 'post_type' => 'about_me', // カスタム投稿タイプを指定
@@ -174,9 +179,6 @@
                 wp_reset_postdata(); // カスタムクエリをリセット
             endif;
             ?>
-
-
-
 
             <div class="sec-about__skills">
                 <div class="skills">

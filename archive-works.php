@@ -1,14 +1,5 @@
 <?php get_header(); ?>
 
-<header class="header">
-    <div class="header__body">
-        <h1 class="header__ttl">
-            <a href="<?php echo home_url(); ?>" class="logo -txt--white">
-                KT PORTFOLIO
-            </a>
-        </h1>
-</header>
-
 <section class="sec-works" id="works">
     <div class="sec-works__ttl -txt--white">
         <div class="headline">

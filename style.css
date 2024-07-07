@@ -201,7 +201,14 @@ print {
 .blog-art__title {
     margin-top: 80px;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
+}
+
+@media screen and (min-width: 768px),
+print {
+    .blog-art__title {
+        font-size: 36px;
+    }
 }
 
 .blog-art__content p{
@@ -694,19 +701,26 @@ print {
 }
 
 .post-nav__previous,
-.post-nav__next {
+.post-nav__next,
+.post-nav__list {
     margin-top: 20px;
 }
 
 .post-nav__previous a,
-.post-nav__next a{
+.post-nav__next a,
+.post-nav__list a{
     color: black;
     font-weight: 500;
 }
 
 .post-nav__previous a:visited,
-.post-nav__next a:visited{
+.post-nav__next a:visited,
+.post-nav__list a:visited{
     color: black;
+}
+
+.post-nav__list {
+    text-align: end;
 }
 
 .sec-about {
