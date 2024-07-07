@@ -1,60 +1,10 @@
 <?php get_header(); ?>
 
-<header class="header">
-
-    <div class="header__inner">
-        <div class="header__body">
-            <h1 class="header__ttl">
-                <a href="#" class="logo">
-                    KT PORTFOLIO
-                </a>
-            </h1>
-            <button id="openbtn" class="openbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <!-- /.header__body -->
-
-        <div id="overlay" class="header__overlay overlay">
-            <nav class="overlayMenu__nav">
-                <ul class="overlayMenu__list">
-                    <li class="overlayMenu__item">
-                        <a href="<?php echo home_url(); ?>" class="overlayMenu__link">
-                            Top
-                        </a>
-                    </li>
-                    <li class="overlayMenu__item">
-                        <a href="#about" class="overlayMenu__link">
-                            ABOUT
-                        </a>
-                    </li>
-                    <li class="overlayMenu__item">
-                        <a href="#works" class="overlayMenu__link">
-                            WORKS
-                        </a>
-                    </li>
-                    <li class="overlayMenu__item">
-                        <a href="#faq" class="overlayMenu__link">
-                            FAQ
-                        </a>
-                    </li>
-                    <li class="overlayMenu__item">
-                        <a href="#contact" class="overlayMenu__link">
-                            CONTACT
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <!-- /#overlay.overlay -->
-    </div>
-    <!-- /.header__inner -->
+<main class="main">
 
 
 
-    <div class="header__fv">
+    <div class="fv">
         <div id="js-slide" class="fv__photo">
             <img src="<?php echo get_template_directory_uri(); ?>/src/img/fv/fv1.webp" alt="作業風景の画像">
             <img src="<?php echo get_template_directory_uri(); ?>/src/img/fv/fv2.webp" alt="チーム作業の画像">
@@ -75,13 +25,8 @@
     </div>
     <!-- /.fv -->
 
-</header>
 
-
-<main class="main">
-
-
-    <section class="sec-slide">
+    <section class="sec-slide" id="making">
         <div class="sec-slide__ttl">
             <div class="headline">
                 <h2 class="headline__main">MAKING</h2>
@@ -95,7 +40,7 @@
             <div class="slide">
                 <div class="slide__item">
                     <!-- スライド -->
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQQnODu7dlpWd3tgtE-bjN-tSq8wTj4Pae-sf8Z6kN8vQOcTtpziVgG4ylYZycawup_F5iFXAh5tiBW/embed?start=false&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQQnODu7dlpWd3tgtE-bjN-tSq8wTj4Pae-sf8Z6kN8vQOcTtpziVgG4ylYZycawup_F5iFXAh5tiBW/embed?start=false&loop=true&delayms=3000" frameborder="0" width="800" height="450" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
                 </div>
                 <!-- /.slide__item -->
             </div>
@@ -107,10 +52,47 @@
 
 
 
+    <section class="sec-blog" id="blog">
+        <div class="sec-blog__ttl">
+            <div class="headline">
+                <h2 class="headline__main">BLOG</h2>
+                <span class="headline__sub">ブログ</span>
+            </div>
+            <!-- /.headline -->
+        </div>
+        <!-- /.sec-blog__ttl -->
+        <div class="sec-blog__content">
+            <div class="blog">
+                <ul class="blog__list">
+
+
+                    <?php
+                    if (have_posts()) :
+                        while (have_posts()) : the_post();
+                    ?>
+                            <?php get_template_part('loop', 'blog'); ?>
+
+                    <?php endwhile;
+                    endif;
+                    ?>
 
 
 
-
+                </ul>
+                <div class="blog__moreInfo">
+                    <a href="<?php echo esc_url(get_post_type_archive_link('blog')); ?>" class="btn">
+                        その他の制作物はこちら
+                        <span class="btn__decoration">
+                            +
+                        </span>
+                    </a>
+                </div>
+                <!-- /.blog__moreInfo -->
+            </div>
+            <!-- /.blog -->
+        </div>
+        <!-- /.sec-blog__content -->
+    </section>
 
 
 
@@ -162,7 +144,6 @@
         </div>
         <!-- /.sec-works__content -->
     </section>
-
 
     <section class="sec-about" id="about">
         <div class="sec-about__ttl">

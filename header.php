@@ -57,3 +57,67 @@
         <!-- /.spinner -->
     </div>
     <!-- /.loader-bg -->
+
+    <header class="header">
+
+        <div class="header__inner">
+            <div class="header__body">
+                <h1 class="header__ttl">
+                    <a href="<?php echo esc_url(home_url()); ?>" class="logo">
+                        KT PORTFOLIO
+                    </a>
+                </h1>
+                <button id="openbtn" class="openbtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <!-- /.header__body -->
+
+            <div id="overlay" class="header__overlay overlay">
+                <nav class="overlayMenu__nav">
+                    <ul class="overlayMenu__list">
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>" class="overlayMenu__link">
+                                Top
+                            </a>
+                        </li>
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>#making" class="overlayMenu__link">
+                                MAKING
+                            </a>
+                        </li>
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>#blog" class="overlayMenu__link">
+                                BLOG
+                            </a>
+                        </li>
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>#works" class="overlayMenu__link">
+                                WORKS
+                            </a>
+                        </li>
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>#about" class="overlayMenu__link">
+                                ABOUT
+                            </a>
+                        </li>
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>#faq" class="overlayMenu__link">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="overlayMenu__item">
+                            <a href="<?php echo esc_url(home_url()); ?>#contact" class="overlayMenu__link">
+                                CONTACT
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /#overlay.overlay -->
+        </div>
+        <!-- /.header__inner -->
+
+    </header>

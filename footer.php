@@ -1,27 +1,37 @@
 <footer class="footer">
         <div class="footer__inner">
-            <a href="<?php echo home_url(); ?>" class="logo">
+            <a href="<?php echo esc_url(home_url()); ?>" class="logo">
                 KT PORTFOLIO
             </a>
             <div class="nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="<?php echo home_url(); ?>#about" class="nav__link">
-                            About
+                        <a href="<?php echo esc_url(home_url()); ?>#making" class="nav__link">
+                            Making
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="<?php echo home_url(); ?>#works" class="nav__link">
+                        <a href="<?php echo esc_url(home_url()); ?>#blog" class="nav__link">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="<?php echo esc_url(home_url()); ?>#works" class="nav__link">
                             Works
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="<?php echo home_url(); ?>#faq" class="nav__link">
+                        <a href="<?php echo esc_url(home_url()); ?>#about" class="nav__link">
+                            About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="<?php echo esc_url(home_url()); ?>#faq" class="nav__link">
                             Faq
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="<?php echo home_url(); ?>#contact" class="nav__link">
+                        <a href="<?php echo esc_url(home_url()); ?>#contact" class="nav__link">
                             Contact
                         </a>
                     </li>
