@@ -687,6 +687,28 @@ print {
     color: rgb(23, 23, 23);
 }
 
+.post-nav {
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 1px solid #efefef; 
+}
+
+.post-nav__previous,
+.post-nav__next {
+    margin-top: 20px;
+}
+
+.post-nav__previous a,
+.post-nav__next a{
+    color: black;
+    font-weight: 500;
+}
+
+.post-nav__previous a:visited,
+.post-nav__next a:visited{
+    color: black;
+}
+
 .sec-about {
     padding: 60px 0;
     background-color: #EFEFEF;

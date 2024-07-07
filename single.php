@@ -17,10 +17,22 @@ if (have_posts()) {
             <div class="blog-art__content">
                 <?php the_content(); ?>
             </div>
+            <div class="post-nav">
+                <?php
+                // 前の記事へのリンク
+                previous_post_link('<div class="post-nav__previous">%link</div>', '前の記事: %title');
+
+                // 次の記事へのリンク
+                next_post_link('<div class="post-nav__next">%link</div>', '次の記事: %title');
+                ?>
+            </div>
         </article>
 <?php
     }
 }
 ?>
+
+
+
 
 <?php get_footer(); ?>
