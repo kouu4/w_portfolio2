@@ -17,6 +17,8 @@
                 <?php
                 if (has_post_thumbnail()) {
                     the_post_thumbnail('full'); // 'full'の代わりにサイズを指定できます
+                } else {
+                    echo '<img src="' . get_template_directory_uri() . '/src/img/bicycle3.jpg">';
                 }
                 ?>
             </figure>
