@@ -31,7 +31,7 @@
             <figure class="works__image">
                 <?php
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('full'); // 'full'の代わりにサイズを指定できます
+                    the_post_thumbnail('full');
                 }
                 ?>
             </figure>

@@ -16,7 +16,7 @@
             <figure class="blog__image">
                 <?php
                 if (has_post_thumbnail()) {
-                    the_post_thumbnail('full'); // 'full'の代わりにサイズを指定できます
+                    the_post_thumbnail('full');
                 } else {
                     echo '<img src="' . get_template_directory_uri() . '/src/img/bicycle3.jpg">';
                 }

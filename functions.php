@@ -18,3 +18,5 @@ add_theme_support('post-thumbnails');
 
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 // add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
+
+get_template_part('fnc/fnc-enableEyecatchesInList');
