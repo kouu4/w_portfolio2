@@ -14,9 +14,13 @@ function my_enqueue_styles()
 //     wp_enqueue_script('accordion-js', get_template_directory_uri() . '/src/js/accordion.js', array('jquery'), null, true);
 // }
 
+//WPのバージョン情報非表示
+remove_action( 'wp_head', 'wp_generator');
+
 add_theme_support('post-thumbnails');
 
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 // add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
 get_template_part('fnc/fnc-enableEyecatchesInList');
+

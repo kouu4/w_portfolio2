@@ -6,7 +6,7 @@ if (!function_exists('add_custom_post_columns')) {
     function add_custom_post_columns($columns)
     {
         global $post_type;
-        if (in_array($post_type, array('post', 'page', 'blog'))) { //列を追加するタイプをここで指定
+        if (in_array($post_type, array('post', 'page'))) { //列を追加するタイプをここで指定
             $columns['thumbnail'] = 'アイキャッチ画像';    //カラム表示名
         }
         return $columns;
