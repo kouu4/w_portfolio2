@@ -15,12 +15,15 @@ function my_enqueue_styles()
 // }
 
 //WPのバージョン情報非表示
-remove_action( 'wp_head', 'wp_generator');
+remove_action('wp_head', 'wp_generator');
 
 add_theme_support('post-thumbnails');
 
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 // add_action('wp_enqueue_scripts', 'my_enqueue_scripts');
 
-get_template_part('fnc/fnc-enableEyecatchesInList');
+// fnc
+get_template_part('fnc/fnc-enable_eyecatches_in_list'); //投稿一覧にアイキャッチを表示
+// get_template_part('fnc/fnc-admin_menu');  // 管理画面の項目を非表示にする
+get_template_part('fnc/fnc-show_template_file_name'); // どのテンプレートファイルが表示されているのか管理バーに表示する
 

@@ -1,4 +1,7 @@
 <?php
+/*
+    投稿一覧ページにアイキャッチ画像を表示させる
+*/
 //各投稿一覧ページにアイキャッチ画像用の列を追加
 add_filter('manage_posts_columns', 'add_custom_post_columns');    //投稿 & カスタム投稿
 add_filter('manage_pages_columns', 'add_custom_post_columns');   //固定ページ

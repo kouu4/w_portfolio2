@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template Name: Post List Page
  */
@@ -25,7 +26,7 @@
 
                 <?php
                 $args = array(
-                    'post_type' => 'post', 
+                    'post_type' => 'post',
                     'posts_per_page' => -1, // 取得する投稿数（-1は全ての投稿を取得）
                 );
 
@@ -44,6 +45,9 @@
             </ul>
         </div>
         <!-- /.blog -->
+
+        <?php the_posts_pagination(); ?>
+        
     </div>
     <!-- /.sec-blog__content -->
 </section>
