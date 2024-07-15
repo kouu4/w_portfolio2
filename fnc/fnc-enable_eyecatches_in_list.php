@@ -32,3 +32,5 @@ if (!function_exists('output_custom_post_columns')) {
         }
     }
 }
+
+?>

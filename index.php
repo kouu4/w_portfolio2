@@ -85,13 +85,14 @@
 
                 </ul>
                 <div class="blog__moreInfo">
-                    <?php $archive_link = home_url('posts'); ?>
+                    <!-- <?php $archive_link = home_url('posts'); ?> -->
                     <a href="<?php echo esc_url(home_url('posts')); ?>" class="btn">
                         その他の記事はこちら
                         <span class="btn__decoration">
                             +
                         </span>
                     </a>
+                    <a href="<?php echo esc_url(home_url('/all-posts')); ?>">全投稿記事一覧</a>
                 </div>
 
                 <!-- /.blog__moreInfo -->

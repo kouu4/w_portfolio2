@@ -23,3 +23,4 @@ function show_template_file_name( $wp_admin_bar ) {
 
 }
 add_action( 'admin_bar_menu', 'show_template_file_name', 100 );
+?>
