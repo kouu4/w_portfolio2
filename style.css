@@ -694,6 +694,56 @@ print {
     color: rgb(23, 23, 23);
 }
 
+.p-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 77px;
+}
+
+
+/* .pagination {
+    border: 2px solid rgba(141, 141, 141);
+    padding: 18px 32px;
+    border-radius: 9999px;
+}
+
+.page-numbers {
+    font-size: 20px;
+    padding-left: 20px;
+} */
+
+.pagination {
+    border: 2px solid rgba(141, 141, 141);
+    padding: 18px 32px;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ececec;
+}
+
+.page-numbers {
+    font-size: 20px;
+    padding: 0 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.page-numbers:hover {
+    color: #0056b3; 
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.page-numbers.current {
+    font-weight: bold;
+}
+
+
+
+
 .post-nav {
     margin-top: 50px;
     padding: 20px;

@@ -38,20 +38,31 @@
                     while ($all_posts_query->have_posts()) : $all_posts_query->the_post(); ?>
                         <?php get_template_part('loop', 'blog'); ?>
                 <?php endwhile;
-                    // ページネーションを表示
-                    the_posts_pagination(array(
-                        'prev_text' => __('Previous', 'textdomain'),
-                        'next_text' => __('Next', 'textdomain'),
-                    ));
                 else :
                     get_template_part('template-parts/content', 'none');
-                    wp_reset_postdata();
                 endif;
                 ?>
-
-
-
             </ul>
+
+            <?php if ($all_posts_query->have_posts()) : ?>
+                <div class="p-pagination">
+                    <?php
+                    // ページネーションを表示
+                    the_posts_pagination(array(
+                        'base'    => home_url('/all-posts/%_%'),
+                        'format'  => 'page/%#%',
+                        'current' => max(1, get_query_var('paged')),
+                        'total'   => $all_posts_query->max_num_pages,
+                        'mid_size' => 2,
+                        'prev_text' => '&lt;&lt; PREV',
+                        'next_text' => 'NEXT &gt;&gt;',
+                    ));
+                    ?>
+                </div>
+            <?php endif; ?>
+
+            <?php wp_reset_postdata(); ?>
+
         </div>
         <!-- /.blog -->
     </div>
