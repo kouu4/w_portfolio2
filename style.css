@@ -701,18 +701,6 @@ print {
     margin-top: 77px;
 }
 
-
-/* .pagination {
-    border: 2px solid rgba(141, 141, 141);
-    padding: 18px 32px;
-    border-radius: 9999px;
-}
-
-.page-numbers {
-    font-size: 20px;
-    padding-left: 20px;
-} */
-
 .pagination {
     border: 2px solid rgba(141, 141, 141);
     padding: 18px 32px;
@@ -720,7 +708,7 @@ print {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ececec;
+    background-color: #eaeaea;
 }
 
 .page-numbers {
