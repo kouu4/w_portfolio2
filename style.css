@@ -727,6 +727,13 @@ print {
 
 .page-numbers.current {
     font-weight: bold;
+    transition: none;
+}
+
+.page-numbers.current:hover {
+    color: #333;
+    background-color: transparent;
+    border-radius: 0;
 }
 
 .post-nav {
