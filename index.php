@@ -68,7 +68,7 @@
                     <?php
                     $args = array(
                         'post_type' => 'post',
-                        'posts_per_page' => 3,
+                        'posts_per_page' => 6,
                     );
 
                     $post_query = new WP_Query($args);
