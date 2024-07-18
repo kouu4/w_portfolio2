@@ -17,16 +17,23 @@ if (have_posts()) {
             <div class="blog-art__content">
                 <?php the_content(); ?>
             </div>
-            <div class="post-nav">
-                <?php
-                // 前の記事へのリンク
-                previous_post_link('<div class="post-nav__previous">%link</div>', '前の記事: %title');
+            <div class="blog-art__nav">
+                <div class="post-nav">
 
-                // 次の記事へのリンク
-                next_post_link('<div class="post-nav__next">%link</div>', '次の記事: %title');
-                ?>
-                <div class="post-nav__list">
-                    <a href="<?php echo home_url('/all-posts'); ?>">記事一覧>></a>
+                    <?php
+                    // 前の記事へのリンク
+                    previous_post_link('<div class="post-nav__previous">&laquo; %link</div>', '前の記事');
+                    ?>
+    
+                    <div class="post-nav__list">
+                        <a href="<?php echo home_url('/all-posts'); ?>">記事一覧</a>
+                    </div>
+    
+                    <?php
+                    // 次の記事へのリンク
+                    next_post_link('<div class="post-nav__next">%link &raquo;</div>', '次の記事');
+                    ?>
+    
                 </div>
             </div>
         </article>
