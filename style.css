@@ -799,12 +799,21 @@ print {
 .post-nav__list a {
     color: black;
     font-weight: 500;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .post-nav__previous a:visited,
 .post-nav__next a:visited,
 .post-nav__list a:visited {
     color: black;
+}
+
+.post-nav__previous a:hover,
+.post-nav__next a:hover,
+.post-nav__list a:hover {
+    color: #0056b3;
+    background-color: #e0e0e0;
+    border-radius: 5px;
 }
 
 .sec-about {
