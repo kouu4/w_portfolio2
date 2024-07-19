@@ -24,16 +24,16 @@ if (have_posts()) {
                     // 前の記事へのリンク
                     previous_post_link('<div class="post-nav__previous">%link</div>', '&laquo;前の記事');
                     ?>
-    
+
                     <div class="post-nav__list">
                         <a href="<?php echo home_url('/all-posts'); ?>">記事一覧</a>
                     </div>
-    
+
                     <?php
                     // 次の記事へのリンク
                     next_post_link('<div class="post-nav__next">%link</div>', '次の記事  &raquo;');
                     ?>
-    
+
                 </div>
             </div>
         </article>

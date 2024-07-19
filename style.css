@@ -797,6 +797,8 @@ print {
 .post-nav__previous a,
 .post-nav__next a,
 .post-nav__list a {
+    display: inline-block;
+    padding: 2px;
     color: black;
     font-weight: 500;
     transition: color 0.3s ease, background-color 0.3s ease;
