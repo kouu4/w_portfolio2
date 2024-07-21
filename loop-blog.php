@@ -4,6 +4,12 @@
             <h3 class="blog__ttl">
                 <?php the_title(); ?>
             </h3>
+            <div class="blog__info">
+                <span class="blog__postDate">
+                    <?php the_date(); ?>
+                </span>
+            </div>
+            <!-- /.blog__info -->
             <div class="blog__description">
                 <p class="blog__text">
                     <?php the_excerpt(); ?>
