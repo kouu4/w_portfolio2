@@ -64,10 +64,26 @@ print {
     margin-inline: auto;
 }
 
+.blog__category {
+    padding: 2px 5px;
+    color: white;
+    background-color: #bcbcbc;
+}
+
+.blog__category + .blog__category{
+    margin-left: 5px;
+}
+
 .blog__list {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr;
+}
+
+.blog__info {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .blog__item {
@@ -110,7 +126,7 @@ print {
 }
 
 .blog__text {
-    margin-top: 26px;
+    margin-top: 8px;
     padding-inline: 10px;
 }
 

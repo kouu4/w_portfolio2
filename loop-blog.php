@@ -5,6 +5,16 @@
                 <?php the_title(); ?>
             </h3>
             <div class="blog__info">
+                <?php
+                $categories = get_the_category();
+                if (! empty($categories)) {
+                    echo '<div class="blog__categories">';
+                    foreach ($categories as $category) {
+                        echo '<span class="blog__category">' . $category -> name . '</span>';
+                    }
+                    echo '</div>';
+                };
+                ?>
                 <span class="blog__postDate">
                     <?php the_date(); ?>
                 </span>
