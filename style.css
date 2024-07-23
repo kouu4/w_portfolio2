@@ -65,9 +65,9 @@ print {
 }
 
 .blog__category {
-    padding: 2px 5px;
-    color: white;
-    background-color: #bcbcbc;
+    padding: 3px 5px;
+    border: 1px solid #bcbcbc;
+    border-radius: 4px;
 }
 
 .blog__category + .blog__category{
