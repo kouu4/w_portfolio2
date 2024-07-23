@@ -14,21 +14,22 @@ if (have_posts()) {
                 <?php endif; ?>
                 <h1 class="blog-art__title"><?php the_title(); ?></h1>
                 <div class="blog__info">
-                <?php
-                $categories = get_the_category();
-                if (! empty($categories)) {
-                    echo '<div class="blog__categories">';
-                    foreach ($categories as $category) {
-                        echo '<span class="blog__category">' . $category -> name . '</span>';
+                    <?php
+                    $categories = get_the_category();
+                    if (!empty($categories)) {
+                        echo '<div class="blog__categories">';
+                        foreach ($categories as $category) {
+                            $category_link = get_category_link($category->term_id);
+                            echo '<a href="' . esc_url($category_link) . '" class="blog__category">' . esc_html($category->name) . '</a>';
+                        }
+                        echo '</div>';
                     }
-                    echo '</div>';
-                };
-                ?>
-                <span class="blog__postDate">
-                    <?php the_date(); ?>
-                </span>
-            </div>
-            <!-- /.blog__info -->
+                    ?>
+                    <span class="blog__postDate">
+                        <?php the_date(); ?>
+                    </span>
+                </div>
+                <!-- /.blog__info -->
             </header>
             <div class="blog-art__content">
                 <?php the_content(); ?>

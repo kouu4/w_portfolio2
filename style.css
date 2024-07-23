@@ -66,8 +66,15 @@ print {
 
 .blog__category {
     padding: 3px 5px;
+    color: black;
     border: 1px solid #bcbcbc;
     border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+a.blog__category:hover {
+    color: white;
+    background-color: #757575;
 }
 
 .blog__category + .blog__category{
