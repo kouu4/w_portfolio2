@@ -1019,14 +1019,14 @@ print {
 }
 
 h2.wp-block-heading {
-    border-block: 3px solid #252679;
+    border-bottom: 3px solid black;
     padding-block: 0.5rem;
     padding-left: 0.5em;
 }
 
 h3.wp-block-heading {
     padding-left: 0.8rem;
-    border-left: 6px solid #252679;
+    border-left: 6px solid black;
 }
 
 .works {
