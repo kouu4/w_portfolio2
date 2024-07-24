@@ -1,12 +1,3 @@
-<?php
-
-/**
- * Template Name: Post List Page
- */
-?>
-
-
-
 <?php get_header(); ?>
 
 
@@ -15,7 +6,7 @@
     <div class="sec-blog__ttl">
         <div class="headline">
             <h2 class="headline__main">BLOG</h2>
-            <span class="headline__sub">(クリック/タップでサイトへジャンプします)</span>
+            <span class="headline__sub">ブログ</span>
         </div>
         <!-- /.headline -->
     </div>
