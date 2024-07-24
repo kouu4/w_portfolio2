@@ -64,6 +64,12 @@ print {
     margin-inline: auto;
 }
 
+.blog__categories-index {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
 .blog__category {
     padding: 3px 5px;
     color: black;
@@ -88,7 +94,7 @@ a.blog__category:hover {
 }
 
 .blog__info {
-    margin-top: 48px;
+    margin-top: 16px;
     display: flex;
     justify-content: space-between;
 }

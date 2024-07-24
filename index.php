@@ -59,6 +59,19 @@
                 <span class="headline__sub">ブログ</span>
             </div>
             <!-- /.headline -->
+
+            <div class="blog__categories-index">
+                <?php
+                $categories = get_categories();
+                if (!empty($categories)) {
+                    foreach ($categories as $category) {
+                        $category_link = get_category_link($category->term_id);
+                        echo '<a href="' . $category_link . '"class="blog__category">' . $category->name . '</a>';
+                    }
+                }
+                ?>
+            </div>
+
         </div>
         <!-- /.sec-blog__ttl -->
         <div class="sec-blog__content">
@@ -92,7 +105,6 @@
                         </span>
                     </a>
                 </div>
-
                 <!-- /.blog__moreInfo -->
             </div>
             <!-- /.blog -->
