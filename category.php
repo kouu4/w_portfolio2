@@ -8,7 +8,7 @@
         </div>
         <!-- /.headline -->
 
-
+        
         <div class="blog__categories-index">
             <?php
             $categories = get_categories();

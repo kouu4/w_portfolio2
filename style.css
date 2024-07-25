@@ -83,7 +83,7 @@ a.blog__category:hover {
     background-color: #757575;
 }
 
-.blog__category + .blog__category{
+.blog__category+.blog__category {
     margin-left: 5px;
 }
 
@@ -94,7 +94,13 @@ a.blog__category:hover {
 }
 
 .blog__info {
-    margin-top: 16px;
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog__info-single {
+    margin-top: 46px;
     display: flex;
     justify-content: space-between;
 }
@@ -250,6 +256,51 @@ print {
     margin-top: 2em;
     font-size: 16px;
     line-height: 36px;
+}
+
+.blog-recent {
+    margin-top: 148px;
+    padding-top: 22px;
+    padding-bottom: 30px;
+    border-block: 1px solid black;
+}
+
+.blog-recent a {
+    color: black;
+}
+
+.blog-recent a:hover {
+    color: black;
+}
+
+.blog-recent__allPosts {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.blog-recent__item {
+    margin-top: 28px;
+}
+
+.blog-recent__itemInner {
+    display: flex;
+    justify-content: space-between;
+    gap: 42px;
+}
+
+.blog-recent__body {
+    flex-grow: 1;
+}
+
+.blog-recent__thumb {
+    width: 18%;
+    flex-shrink: 0;
+}
+
+.blog-recent__thumb img {
+    width: 100%;
+    height: auto;
 }
 
 .btn {
@@ -780,7 +831,7 @@ print {
 }
 
 .post-nav {
-    
+
     margin-top: 50px;
     padding: 18px 32px;
     border: 2px solid rgba(141, 141, 141);

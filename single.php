@@ -13,7 +13,7 @@ if (have_posts()) {
                     </figure>
                 <?php endif; ?>
                 <h1 class="blog-art__title"><?php the_title(); ?></h1>
-                <div class="blog__info">
+                <div class="blog__info-single">
                     <?php
                     $categories = get_the_category();
                     if (!empty($categories)) {
