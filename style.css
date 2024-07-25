@@ -318,6 +318,7 @@ print {
 }
 
 .blog-recent__link {
+    display: inline-block;
     width: 100%;
     background-color: white;
     transition: 0.5s background-color;
