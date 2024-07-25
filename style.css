@@ -279,14 +279,36 @@ print {
     justify-content: center;
 }
 
+.blog-recent__allPosts a{
+    padding: 9px;
+    background-color: white;
+    transition: 0.5s background-color;
+}
+
+.blog-recent__allPosts a:hover{
+    display: inline-block;
+    background-color: rgba(239, 239, 239, 0.8);
+}
+
 .blog-recent__item {
     margin-top: 28px;
 }
 
 .blog-recent__itemInner {
+    padding: 9px;
     display: flex;
     justify-content: space-between;
     gap: 42px;
+}
+
+.blog-recent__link {
+    background-color: white;
+    transition: 0.5s background-color;
+}
+
+.blog-recent__link:hover {
+    display: inline-block;
+    background-color: rgba(239, 239, 239, 0.8);
 }
 
 .blog-recent__body {
