@@ -53,13 +53,14 @@ if (have_posts()) {
 
                 </div>
             </div>
+
+            <?php get_template_part('template-blog-recent'); ?>
+
         </article>
 <?php
     }
 }
 ?>
-
-
 
 
 <?php get_footer(); ?>
