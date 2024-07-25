@@ -99,6 +99,22 @@ a.blog__category:hover {
     justify-content: space-between;
 }
 
+.blog__info-recent {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (min-width: 500px),
+print {
+    .blog__info-recent {
+        flex-direction: row;
+        gap: initial;
+    }
+}
+
 .blog__info-single {
     margin-top: 46px;
     display: flex;

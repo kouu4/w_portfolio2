@@ -16,7 +16,7 @@
 
                             <div class="blog-recent__body">
                                 <span class="blog-recent__title"><?php the_title(); ?></span>
-                                <div class="blog__info">
+                                <div class="blog__info-recent">
                                     <?php
                                     $categories = get_the_category();
                                     if (!empty($categories)) {
@@ -31,8 +31,9 @@
                                         <?php the_date(); ?>
                                     </span>
                                 </div>
+                                <!-- /.blog__info-recent -->
                             </div>
-                            <!-- /.blog-recent__textArea -->
+                            <!-- /.blog-recent__body -->
 
                             <figure class="blog-recent__thumb">
                                 <?php if (has_post_thumbnail()) : ?>
